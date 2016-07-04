@@ -1,0 +1,67 @@
+.container{
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+box-sizing: border-box;
+padding: 5px;
+margin: 50px;
+transform: rotateY(45deg) rotateZ(45deg);
+
+}
+.container:hover{
+  -webkit-animation: anim 6s infinite linear;
+}
+@-webkit-keyframes anim{
+  from {
+    transform: rotateY(0deg)  rotateX(20deg);;
+  }
+  to{
+    transform: rotateY(100deg)
+    rotateX(90deg);;
+  }
+}
+
+.cube{
+  position: relative;
+}
+.cube *{
+  height: 100px;
+  width: 100px;
+  background-color: cyan;
+  position: absolute;
+  margin: 2px;
+
+  border: 1px solid black;
+  box-sizing: border-box;
+
+}
+.front{
+  background-color: blue;
+transform:  translate3d(0px,0px,50px);
+z-index: 1
+
+}
+
+.back{
+  background-color: red;
+  transform: rotateY(180deg) translate3d(0px,0px,50px);
+}
+
+.left{
+  background-color: orange;
+  transform: rotateY(-90deg) translate3d(0px,0px,50px);
+}
+
+.right{
+  background-color: pink;
+  transform: rotateY(90deg) translate3d(0px,0px,50px);
+}
+.top{
+  transform: rotateX(90deg) translate3d(0px,0px,50px);
+  background-color: grey;
+}
+.bottom{
+  transform: rotateX(-90deg) translate3d(0px,0px,50px);
+  background-color: purple;
+}
