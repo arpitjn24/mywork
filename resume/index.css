@@ -1,0 +1,192 @@
+body{
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 0px;
+  background-image: url(page-bg.jpg);
+  color: grey;
+}
+a{
+  color: red;
+}
+.blank{
+  width: 100%;
+  height: .01px;
+  background-color: orange;
+}
+.top{align-items: flex-end;
+  width: 70%;
+  padding: 3px;
+  display: flex;
+  position: fixed;
+  background-image: url(page-bg.jpg);
+}
+#one{
+height: 40px;
+width: 40%;
+background-repeat: no-repeat;
+flex-shrink: 1;
+align-items: flex-end;
+  background-image: url(logo.png);
+}
+.gap{
+  height: 40px;
+  width: 15%;
+
+}
+.topright{
+  height: 40px;
+  width: 11%;d
+  flex-shrink: 1;
+
+}
+.about{
+  height: 30px;
+  width: 100%;
+  display: flex;
+margin-top: 50px;
+}
+.abouttext{
+  height: 100%;
+  width: 20%;
+  box-sizing: border-box;
+  padding: 2px;
+  font-size: 30px;
+}
+.aboutspace{
+  height: 100%;
+  width: 50%
+}
+.abtimg1{
+  height: 100%;
+  width: 10%;
+          background-image:url(sm-twitter-icon.png);
+          background-repeat: no-repeat;
+}
+.abtimg2{
+  height: 100%;
+  width: 10%;
+          background-image:url(sm-facebook-icon.png);
+          background-repeat: no-repeat;
+}
+.abtimg3{
+  height: 100%;
+  width: 10%;        background-image:url(sm-linkedin-icon.png);
+          background-repeat: no-repeat;
+}
+.divide{
+  height: 10px;
+  width: 100%;
+  margin: 10px;
+  background-repeat: repeat-x;
+  background-image: url(divider.png);
+}
+.aboutbox{
+  height: 200px;
+  width: 100%;
+display: flex;
+}
+.img{height: 250px;
+  width: 27%;
+
+}
+.mytext{
+height: 150px;
+width: 73%;
+padding: 10px;
+}
+.aboutimages{
+  height: 100px;
+  width: 73%;
+  display: flex;
+  margin-left: 380px;
+  margin-top: -50px;
+}
+.img1{
+  height: 110%;
+  width: 25%;
+  background-image: url(icon-1.png);
+  background-repeat: no-repeat;
+}
+.img2{
+
+    height: 110%;
+    width: 25%;
+    background-image: url(icon-2.png);
+    background-repeat: no-repeat;
+}
+.img3{
+
+    height: 110%;
+    width: 25%;
+    background-image: url(icon-3.png);
+    background-repeat: no-repeat;
+}
+.img4{
+
+    height: 110%;
+    width: 25%;
+    background-image: url(icon-4.png);
+    background-repeat: no-repeat;
+}
+.work{
+  box-sizing: border-box;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+#work{
+  font-size: 50px;
+  font-family: monospace;
+}
+.workbox{
+box-sizing: border-box;
+  margin: 2px;
+  padding: 1px
+  height: 100%;
+background-image: url(contentPattern.png);
+  width: 100%;
+  flex-grow: 1;
+  flex-direction: row;
+}
+#experience{
+  font-size: 50px;
+  font-family: monospace;
+}
+
+.experience{
+  height: 400px;
+  width: 100%;
+  display: flex;
+
+}
+.expin{
+  box-sizing: border-box;
+  height: 95%;
+  width: 33%;
+  flex-shrink: 1;
+  flex-grow: 1;
+    margin: 2px;
+    background-image: url(contentPattern.png);
+}
+.connect{
+  height: 400px;
+  width: 100%;
+  display: flex;
+}
+.connectitem{
+  height: 95%;
+  width: 50%;
+
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+}
+.connectimg{
+  margin-top:140px;
+
+}
+#connect{
+  font-size: 50px;
+  font-family: monospace;
+}
