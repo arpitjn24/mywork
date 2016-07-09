@@ -1,0 +1,35 @@
+.outer{height: 200px;
+  width: 260px;
+  margin: 50px;
+padding: 10px;
+  background-color: #9dd2ea;
+  display: block;
+  box-shadow: 0px 4px 2px  black;
+    }
+  #c{padding-top: 5px;
+    background-color: red;
+    width: 50px;
+  }
+  button{
+    border: 1px solid red;
+    width: 45px;
+    height: 30px;
+    align-items: baseline;
+    margin: 2px;
+    box-shadow: 2px 2px;
+}
+.j:active{
+transform: translateY(4px);
+}
+.a{
+padding: 20px;
+}
+#equal{
+background-color: yellow;
+}
+.j{
+background-color: white;
+}
+.j:hover{
+background-color: purple;
+}
