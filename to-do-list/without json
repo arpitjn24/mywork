@@ -1,0 +1,54 @@
+var store = [];
+var i = 0;
+
+function add() {
+    var a = document.getElementById('text').value;
+    document.getElementById('text').value = "";
+    if (a.length == "") return;
+    var curr = document.getElementById('list').innerHTML;
+    store.push({
+        "text": a
+        , "val": false
+    });
+    document.getElementById('list').innerHTML = curr + makeit(i);
+    i++;
+}
+
+function makeit(arg) {
+    return "<li id='item" + arg + "'><input type='checkbox' onclick='check(" + arg + ")'>" + store[arg].text + "</li>"
+}
+
+function check(k) {
+    if (store[k].value == true) 
+        document.getElementById("item" + k).setAttribute("class", "notchecked")
+    else
+        document.getElementById("item" + k).setAttribute("class", "checked")
+    
+        console.log(store[k].val)
+    store[k].val =!(store[k].val);
+        };
+
+function del(){
+    for(j=0;j<i;j++)
+        {console.log(j);
+    if(store[j].val)
+            {
+        store.splice(j,1);
+                i--;
+                j--;
+            }
+        }
+    rebuild();
+}
+function rebuild(){
+document.getElementById('list').innerHTML="";
+    for(m=0;m<i;m++)
+        {
+            var prev=document.getElementById('list').innerHTML;
+            document.getElementById('list').innerHTML=prev+makeit(m);
+        }
+    
+    
+}
+
+

@@ -1,0 +1,181 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #canvas{
+            border: 4px solid rebeccapurple;
+     background-image: url("Violet_Citys_Pokémon_Gym.png");
+            background-size: cover;
+        }
+    </style>
+    <title>my game</title>
+</head>
+<body>
+<canvas id="canvas" height="600px" width="1200px">
+
+</canvas>
+<script>
+    var canvas=document.getElementById("canvas");
+    var ctx=canvas.getContext('2d');
+ctx.backgroundImage="image(1).jpg";
+   var k=1;
+    var player={x:0,
+    y:250,
+    w:50,
+    h:50,
+    speedx:3}
+    ismoving=false;
+    speedx=3;
+    var goal={
+        x:1150,
+        y:250,
+        w:50,
+    h:50}
+    const enemy=[{
+         x:250,
+          y:0,
+          w:50,
+    h:50,
+    speedy:1},
+        {
+            x:550,
+            y:0,
+            w:50,
+            h:50,
+            speedy:4},
+        {
+            x:750,
+            y:0,
+            w:50,
+            h:50,
+            speedy:3},
+        {
+            x:950,
+            y:0,
+            w:50,
+            h:50,
+            speedy:2},];
+    var sprites={};
+   sprites.player=new Image();
+    sprites.player.src="assets/pika.png";
+    sprites.enemy=[];
+    sprites.enemy[0]=new Image();
+    sprites.enemy[0].src="assets/drowsy.png";
+    sprites.enemy[1]=new Image();
+    sprites.enemy[1].src="assets/gengar.png";
+    sprites.enemy[2]=new Image();
+    sprites.enemy[2].src="assets/charizad.png";
+    sprites.enemy[3]=new Image();
+    sprites.enemy[3].src="assets/bulbasaur.png";
+    sprites.enemy[4]=new Image();
+    sprites.enemy[4].src="assets/bulbasaur.png";
+    sprites.goal=new Image();
+    sprites.goal.src="assets/ball.png";
+    function iscolliding(r1,r2) {
+       // console.log(r1.x,r2.x,r1.w,r2.w)
+        //console.log(r1.y,r2.y,r1.w,r2.w)
+        fc=(Math.abs(r1.x-r2.x)<=40);
+        sc=(Math.abs(r1.y-r2.y)<=40);
+        //console.log(fc);
+        if(fc && sc)
+            return true;
+        else
+            return false;
+    }
+    var draw=function() {
+        ctx.clearRect(0,0,1200,800);
+       /* ctx.fillStyle="black";
+        ctx.fillRect(1150,250,50,50);
+
+       ctx.fillStyle = "red";
+        ctx.fillRect(250, y+250, 50, 50);
+        ctx.fillStyle = "red";
+        ctx.fillRect(550,y, 50, 50);
+        ctx.fillStyle = "red";
+        ctx.fillRect(750,y, 50, 50);
+        ctx.fillStyle = "red";
+        ctx.fillRect(950,y, 50, 50);
+        ctx.fillStyle="orange";
+      //  ctx.fillRect(x,250,50,50);*/
+        ctx.fillStyle = "red";
+       enemy.forEach(function (element,index) {
+         ctx.drawImage(sprites.enemy[index], element.x, element.y, element.w, element.h);
+    });
+      ctx.drawImage(sprites.player,player.x,player.y,player.w,player.h);
+   ctx.drawImage(sprites.goal,goal.x,goal.y,goal.w,goal.h);
+
+if(!gameover)
+        window.requestAnimationFrame(render);
+
+
+    }
+    canvas.addEventListener("mousedown",function () {
+ismoving=true;
+    });
+    canvas.addEventListener("mouseup",function () {
+        ismoving=false;
+    })
+    var gameover=false;
+
+    function enemyup() {
+        ememy.forEach(function (element,index) {
+            element[index].speedy*=k;
+        })
+    }
+   var update=function () {
+        if(player.x>=1100)
+        {             console.log("win");
+            alert('you won');
+            alert('next level');
+              player.x=0;
+                     k=2;
+            enemy.forEach(function (element,index) {
+                element.speedy*=k;
+                ismoving=false;
+            })
+            player.speedx=k*player.speedx;
+
+                console.log(k);}
+            //gameover==true;
+
+        //collide
+        enemy.forEach(function (element,index) {
+            //console.log('call collide')
+            if(iscolliding(player,element)){
+                window.alert('you lose');
+                window.location=window.location;
+             gameover=true;
+               console.log('working')
+            }
+        })
+
+
+//enemymove
+
+
+        enemy.forEach(function (element,index) {
+            element.y+=element.speedy;
+            if(element.y>=550 || element.y<0)
+        {//console.log('helo')
+
+            (element.speedy)*=-1;
+            
+        }
+
+        });
+//player move
+
+        if(ismoving)
+        {player.x+=player.speedx;}
+    }
+    var render=function () {
+      update();
+        draw();
+    }
+    render();
+
+
+</script>
+</body>
+</html>
