@@ -116,6 +116,12 @@ ismoving=true;
     canvas.addEventListener("mouseup",function () {
         ismoving=false;
     })
+    canvas.addEventListener("touchstart",function () {
+ismoving=true;
+    });
+    canvas.addEventListener("touchend",function () {
+        ismoving=false;
+    })
     var gameover=false;
 
     function enemyup() {
