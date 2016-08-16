@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+     <style>
+         *{
+             padding: 2px;
+         }
+
+
+
+     </style>
+<script>
+    function host() {
+//document.getElementById('player').style.display='none';
+        document.getElementById('player').innerHTML='';}
+
+        function player() {
+//document.getElementById('player').style.display='none';
+            document.getElementById('host').innerHTML='';
+    }
+</script>    
+</head>
+<body>
+ <div class="col-xs-12 text-center" style="background-color: antiquewhite;height:500px;">
+        <h1>Enter Details</h1>
+    <form class="col-xs-12 col-sm-8 col-sm-offset-2 form-horizontal">
+        <div class="form-group form-group-lg">
+            <div class="col-sm-12">
+                <input class="form-control" type="text" placeholder="name">
+            </div>
+        </div>
+
+
+        <button type="submit" class="btn btn-warning btn-lg pull-left col-xs-5" onclick="host()"><b/>As Host</button>
+        <button type="submit" class="btn btn-warning btn-lg pull-right col-xs-5" onclick="player()" ><b/>As player</button>
+    </form>
+     <div class="col-xs-4 "id="host"><br><br>
+     Enter host name:
+
+            <input type="text" class="form-control" placeholder="host-room">
+
+   <button type="button" class="btn btn-success" ">Success</button>
+     </div>
+
+
+
+     <div class="col-xs-4 player pull-right" id="player">
+         <br><br>choose host:
+<!--make div or anything for selectio of host room-->
+         <br><br><br>
+         <button type="button" class="btn btn-success">Success</button>
+
+
+     </div>
+</div>
+
+
+
+
+</body>
+</html>
