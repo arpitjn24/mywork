@@ -1,0 +1,13 @@
+ #skill:hover{
+     -webkit-animation: skil 5s infinite linear;
+
+ }
+ @-webkit-keyframes skil {
+     0%{
+         font-size: 20px;
+
+     }
+     50%{
+         font-size: 40px;
+     }
+ }
