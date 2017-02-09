@@ -29,11 +29,15 @@ var context = canvas.getContext('2d');
     } , 0 );   // defer the 
    
 }, false);
-
-cool=function () {
+var p=document.getElementById('box');
+ p.addEventListener('mouseup',cool,false);
+ p.addEventListener('touchend',cool,false);
+function  cool () {
     flag=0;
 }
-col=function (evt) {
+p.addEventListener('mousedown',col,false);
+p.addEventListener('touchstart',col,false);
+function  col(evt) {
   prevPos = getMousePos(canvas,evt);
     flag=1;
 
