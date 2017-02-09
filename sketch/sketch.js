@@ -18,8 +18,6 @@ var context = canvas.getContext('2d');
  canvas.addEventListener('touchmove',apply,false);
 // canvas.addEventListener('mousemove', function(evt)
  function apply(evt) {
-
- }{
     setTimeout( function () {
       if (flag)
      {   
@@ -33,7 +31,7 @@ var context = canvas.getContext('2d');
       }
     } , 0 );   // defer the 
    
-}, false);
+}
 var p=document.getElementById('box');
  p.addEventListener('mouseup',cool,false);
  p.addEventListener('touchend',cool,false);
