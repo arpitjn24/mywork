@@ -14,7 +14,12 @@ function getMousePos(canvas, evt) {
 }
 
 var context = canvas.getContext('2d');
- canvas.addEventListener('mousemove', function(evt) {
+ canvas.addEventListener('mousemove',apply,false);
+ canvas.addEventListener('touchmove',apply,false);
+// canvas.addEventListener('mousemove', function(evt)
+ function apply(evt) {
+
+ }{
     setTimeout( function () {
       if (flag)
      {   
