@@ -13,7 +13,7 @@ function getMousePos(canvas, evt) {
     };
 }
 
-var context = canvas.getContext('2d');
+var context = canvas.getContext('2d');//ctx
  canvas.addEventListener('mousemove',apply,false);
  canvas.addEventListener('touchmove',apply,false);
 // canvas.addEventListener('mousemove', function(evt)
@@ -22,7 +22,7 @@ var context = canvas.getContext('2d');
       if (flag)
      {   
          var mousePos = getMousePos(canvas, evt);
-         context.fillStyle="blue";
+         context.fillStyle="red";
          context.beginPath();
          context.moveTo(mousePos.x,mousePos.y);
          context.lineTo(prevPos.x,prevPos.y);
@@ -36,12 +36,12 @@ var p=document.getElementById('box');
  p.addEventListener('mouseup',cool,false);
  p.addEventListener('touchend',cool,false);
 function  cool () {
-    flag=0;
+    flag=0;//paint
 }
 p.addEventListener('mousedown',col,false);
 p.addEventListener('touchstart',col,false);
 function  col(evt) {
   prevPos = getMousePos(canvas,evt);
-    flag=1;
+    flag=1;//paint
 
 }
